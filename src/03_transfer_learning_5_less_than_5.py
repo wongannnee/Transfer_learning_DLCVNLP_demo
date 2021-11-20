@@ -16,11 +16,13 @@ logging.basicConfig(
     filemode="a"
     )
 
-def update_even_odd_labels(list_of_labels):
+
+def update_greater_than_less_than_5(list_of_labels):
     for idx, label in enumerate(list_of_labels):
-        even_condition = label%2 == 0
+        even_condition = label%2 == 0 ## CHANGE THE CONDITION
         list_of_labels[idx] = np.where(even_condition, 1, 0)
     return list_of_labels
+
 
 def main(config_path):
     ## read config files
@@ -52,7 +54,6 @@ def main(config_path):
     base_model_path = os.path.join("artifacts", "models", "base_model.h5")
     base_model = tf.keras.models.load_model(base_model_path)
     logging.info(f"loaded base model summary: \n{_log_model_summary(base_model)}")
-    logging.info(f"base model evaluation metrics {base_model.evaluate(X_test, y_test)}")  # << y_test_bin for our usecase
 
     ## freeze the weights
     for layer in base_model.layers[: -1]:

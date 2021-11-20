@@ -1,6 +1,12 @@
 # generic-python-project-template
 generic-python-project-template
 
+## ASSIGNMENT
+
+* Use time module to oberve the training time
+* Check with sigmoid function at output layer by using single unit, loss function binary_crossentropy 
+* Observe the starting accuracy of the training
+
 ## STEPS -
 
 ### STEP 01- Create a repository by using template repository

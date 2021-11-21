@@ -4,6 +4,9 @@ pandas
 numpy
 PyYAML
 tensorflow
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11d9f49677d93c7e10fcadaa476c3196604cdeed
 ### local packages -
 -e . # << uncomment this to install from setup.py
